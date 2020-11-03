@@ -19,7 +19,8 @@ To get this project set up on your local machine, follow these simple steps:
 2. Navigate to your desired location to download the contents of this repository.
 3. Copy and paste the following code into the Terminal: `git clone https://github.com/oracleot/exclusive-clubhouse`
 4. Run re-former.
-5. Run bundle install to get the necessary gems.
+5. Run `bundle install` to get the necessary gems.
+6. Run `rails db:create` followed by `rails db:migrate` to create the database.
 
 👤 **Meron Ogbai**
 
