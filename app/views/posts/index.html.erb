@@ -1,0 +1,14 @@
+<%= render 'logging' %>
+<h1>All Posts</h1>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <% if user_signed_in? %>
+        <%= post.author %>
+        <br>
+      <% end %>
+      <%= post.title %><br>
+      <%= link_to 'View post', post_path(post.id) %><br>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,4 @@
+<%= render 'logging' %>
+<h1><%= @post.title %></h1>
+<h2><%= @post.author if user_signed_in? %></h2>
+<p><%= @post.body %></p>
