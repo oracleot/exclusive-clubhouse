@@ -9,5 +9,11 @@ class PostsController < ApplicationController
     redirect_to root_path if new_post.save
   end
 
-  def index; end
+  def index
+    @posts = Post.all
+  end
+
+  def show
+    @post = Post.find(params[:id])
+  end
 end

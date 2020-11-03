@@ -1,2 +1,14 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<%= render 'logging' %>
+<h1>All Posts</h1>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <% if user_signed_in? %>
+        <%= post.author %>
+        <br>
+      <% end %>
+      <%= post.title %><br>
+      <%= link_to 'View post', post_path(post.id) %><br>
+    </li>
+  <% end %>
+</ul>
